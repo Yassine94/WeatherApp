@@ -10,15 +10,20 @@ import UIKit
 
 class HourlyInfoTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBOutlet weak var HourLabel: UILabel!
+    @IBOutlet weak var IconLabel: UIImageView!
+    @IBOutlet weak var HumidityLabel: UILabel!
+    @IBOutlet weak var TempertureLabel: UILabel!
+    
+    
+    func configure(hour: Int, iconName: String, humidity: Double, temperature: Double) {
+        
+        IconLabel.image = UIImage(named: "\(iconName).png")
+        HourLabel.text = String(hour)
+        HumidityLabel.text = String(humidity)
+        TempertureLabel.text = String(temperature)
+        
+        
     }
     
 }

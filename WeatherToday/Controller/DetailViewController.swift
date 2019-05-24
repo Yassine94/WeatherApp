@@ -39,10 +39,31 @@ class DetailViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            if (infoWeather?.hourly.data.count ?? 0 > 10) {
+                return 10
+            } else {
+                return infoWeather?.hourly.data.count ?? 0
+            }
+        case 2:
+            return infoWeather?.daily.data.count ?? 0
+        case 3:
+            return 3
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+        
+        
+        
+        
+        
         if let cell = TableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell_ID", for: indexPath) as? HeaderTableViewCell {
             cell.configure(iconName: infoWeather?.currently.icon ?? "",
                            temperatures: infoWeather?.currently.temperature ?? 0,
@@ -54,7 +75,7 @@ class DetailViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = TableView.dequeueReusableCell(withIdentifier: "ForecastTableViewCell_ID", for: indexPath) as? ForecastTableViewCell {
-            cell.configure(summary: infoWeather?.currently.icon ?? "")
+            cell.configure(summary: infoWeather?.hourly.summary ?? "")
             return cell
         }
         return UITableViewCell()
