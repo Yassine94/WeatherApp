@@ -16,6 +16,7 @@
 		5FA4CE5D2296DCF000738178 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4CE5C2296DCF000738178 /* City.swift */; };
 		5FA4CE5F2296DCFE00738178 /* CitiesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4CE5E2296DCFE00738178 /* CitiesData.swift */; };
 		5FA4CE612296DD3100738178 /* WeatherMesure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4CE602296DD3100738178 /* WeatherMesure.swift */; };
+		5FCB27CD2297D4C4009A61A3 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB27CC2297D4C4009A61A3 /* RequestManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5FA4CE5C2296DCF000738178 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		5FA4CE5E2296DCFE00738178 /* CitiesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesData.swift; sourceTree = "<group>"; };
 		5FA4CE602296DD3100738178 /* WeatherMesure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMesure.swift; sourceTree = "<group>"; };
+		5FCB27CC2297D4C4009A61A3 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		9CCF217700B00BF0E86851ED /* Pods_WeatherToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6613ACFD62B33FF05FFB5E6 /* Pods-WeatherToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherToday.debug.xcconfig"; path = "Target Support Files/Pods-WeatherToday/Pods-WeatherToday.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 		5FA4CE462296DC5400738178 /* WeatherToday */ = {
 			isa = PBXGroup;
 			children = (
+				5FCB27CB2297D39A009A61A3 /* New Group */,
 				5FA4CE5B2296DC7200738178 /* Model */,
 				5FA4CE5A2296DC6C00738178 /* Cell */,
 				5FA4CE592296DC6100738178 /* Controller */,
@@ -76,6 +79,7 @@
 				5FA4CE4E2296DC5400738178 /* Assets.xcassets */,
 				5FA4CE502296DC5400738178 /* LaunchScreen.storyboard */,
 				5FA4CE532296DC5400738178 /* Info.plist */,
+				5FCB27CC2297D4C4009A61A3 /* RequestManager.swift */,
 			);
 			path = WeatherToday;
 			sourceTree = "<group>";
@@ -102,6 +106,13 @@
 				5FA4CE602296DD3100738178 /* WeatherMesure.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5FCB27CB2297D39A009A61A3 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		6FFB25752BE5A1EF1131323B /* Pods */ = {
@@ -221,6 +232,7 @@
 				5FA4CE4A2296DC5400738178 /* ViewController.swift in Sources */,
 				5FA4CE482296DC5400738178 /* AppDelegate.swift in Sources */,
 				5FA4CE5F2296DCFE00738178 /* CitiesData.swift in Sources */,
+				5FCB27CD2297D4C4009A61A3 /* RequestManager.swift in Sources */,
 				5FA4CE612296DD3100738178 /* WeatherMesure.swift in Sources */,
 				5FA4CE5D2296DCF000738178 /* City.swift in Sources */,
 			);
