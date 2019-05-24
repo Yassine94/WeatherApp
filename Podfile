@@ -6,5 +6,6 @@ target 'WeatherToday' do
   use_frameworks!
 
   # Pods for WeatherToday
+pod  'Alamofire'
 
 end
