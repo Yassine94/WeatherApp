@@ -16,11 +16,17 @@ class HourlyInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var TempertureLabel: UILabel!
     
     
-    func configure(hour: Int, iconName: String, humidity: Double, temperature: Double) {
+    func configure(hour: Int, iconName: String, humidity: Double, temperature: Double, timezone: String) {
+        
+        
+        let date = NSDate(timeIntervalSince1970: TimeInterval(hour))
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(identifier: timezone)
+        formatter.setLocalizedDateFormatFromTemplate("HH")
         
         IconLabel.image = UIImage(named: "\(iconName).png")
-        HourLabel.text = String(hour)
-        HumidityLabel.text = String(humidity)
+        HourLabel.text = String(formatter.string(from: date as Date))
+        HumidityLabel.text = "\(Int(humidity*100)) %"
         TempertureLabel.text = String(temperature)
         
         

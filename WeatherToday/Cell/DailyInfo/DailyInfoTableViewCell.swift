@@ -17,10 +17,14 @@ class DailyInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var MinTemperature: UILabel!
     
     
-    func configure(day: Int, iconName: String, max: Double, min: Double) {
+    func configure(day: Int, iconName: String, max: Double, min: Double, timezone: String) {
+        
+        let date = NSDate(timeIntervalSince1970: TimeInterval(day))
+        let formatter = DateFormatter()
+        formatter.setLocalizedDateFormatFromTemplate("EEEE")
         
         Icon.image = UIImage(named: "\(iconName).png")
-        Day.text = String(day)
+        Day.text = String(formatter.string(from: date as Date))
         MaxTemperature.text = String(max)
         MinTemperature.text = String(min)
         

@@ -59,10 +59,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="leftLabel" destination="Xs2-la-d5c" id="53D-xa-XYl"/>
-                <outlet property="leftTitle" destination="Xbf-0Q-oZh" id="sTq-Ej-Vh5"/>
-                <outlet property="rightLabel" destination="DhM-41-TNB" id="lIt-zK-JXD"/>
-                <outlet property="rightTitle" destination="zvs-8R-2DY" id="PQf-dH-nLe"/>
+                <outlet property="Humidity" destination="Xbf-0Q-oZh" id="Cyn-27-E3q"/>
+                <outlet property="Pressure" destination="Xs2-la-d5c" id="9Qi-uK-PA3"/>
+                <outlet property="UVindex" destination="DhM-41-TNB" id="i7O-e7-8h8"/>
+                <outlet property="Windspeed" destination="zvs-8R-2DY" id="bNb-0q-9Jg"/>
             </connections>
             <point key="canvasLocation" x="148.80000000000001" y="110.64467766116942"/>
         </tableViewCell>

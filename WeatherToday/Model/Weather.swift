@@ -12,6 +12,7 @@ struct Weather: Decodable {
     var currently: Currently
     var hourly: Hourly
     var daily : Daily
+    var timezone: String
 }
 struct Currently : Decodable {
     var icon: String
