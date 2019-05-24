@@ -26,6 +26,8 @@
 		5FCB27E422980700009A61A3 /* HourlyInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCB27E222980700009A61A3 /* HourlyInfoTableViewCell.xib */; };
 		5FCB27E922980960009A61A3 /* DailyInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB27E722980960009A61A3 /* DailyInfoTableViewCell.swift */; };
 		5FCB27EA22980960009A61A3 /* DailyInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCB27E822980960009A61A3 /* DailyInfoTableViewCell.xib */; };
+		5FCB27ED2298114D009A61A3 /* ExtraInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB27EB2298114D009A61A3 /* ExtraInfoTableViewCell.swift */; };
+		5FCB27EE2298114D009A61A3 /* ExtraInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCB27EC2298114D009A61A3 /* ExtraInfoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		5FCB27E222980700009A61A3 /* HourlyInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyInfoTableViewCell.xib; sourceTree = "<group>"; };
 		5FCB27E722980960009A61A3 /* DailyInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyInfoTableViewCell.swift; sourceTree = "<group>"; };
 		5FCB27E822980960009A61A3 /* DailyInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyInfoTableViewCell.xib; sourceTree = "<group>"; };
+		5FCB27EB2298114D009A61A3 /* ExtraInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraInfoTableViewCell.swift; sourceTree = "<group>"; };
+		5FCB27EC2298114D009A61A3 /* ExtraInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExtraInfoTableViewCell.xib; sourceTree = "<group>"; };
 		9CCF217700B00BF0E86851ED /* Pods_WeatherToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6613ACFD62B33FF05FFB5E6 /* Pods-WeatherToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherToday.debug.xcconfig"; path = "Target Support Files/Pods-WeatherToday/Pods-WeatherToday.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +174,8 @@
 		5FCB27D62297E4E8009A61A3 /* ExtraInfo */ = {
 			isa = PBXGroup;
 			children = (
+				5FCB27EB2298114D009A61A3 /* ExtraInfoTableViewCell.swift */,
+				5FCB27EC2298114D009A61A3 /* ExtraInfoTableViewCell.xib */,
 			);
 			path = ExtraInfo;
 			sourceTree = "<group>";
@@ -257,6 +263,7 @@
 				5FCB27EA22980960009A61A3 /* DailyInfoTableViewCell.xib in Resources */,
 				5FA4CE522296DC5400738178 /* LaunchScreen.storyboard in Resources */,
 				5FA4CE4F2296DC5400738178 /* Assets.xcassets in Resources */,
+				5FCB27EE2298114D009A61A3 /* ExtraInfoTableViewCell.xib in Resources */,
 				5FA4CE4D2296DC5400738178 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +324,7 @@
 			files = (
 				5FCB27DB2297E528009A61A3 /* HeaderTableViewCell.swift in Sources */,
 				5FA4CE482296DC5400738178 /* AppDelegate.swift in Sources */,
+				5FCB27ED2298114D009A61A3 /* ExtraInfoTableViewCell.swift in Sources */,
 				5FCB27CF2297D7AD009A61A3 /* MapViewController.swift in Sources */,
 				5FA4CE5F2296DCFE00738178 /* CitiesData.swift in Sources */,
 				5FCB27CD2297D4C4009A61A3 /* RequestManager.swift in Sources */,

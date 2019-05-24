@@ -12,39 +12,53 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="188" id="KGk-i7-Jjw" customClass="HourlyInfoTableViewCell" customModule="WeatherToday" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="522" height="188"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="68" id="KGk-i7-Jjw" customClass="HourlyInfoTableViewCell" customModule="WeatherToday" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="522" height="68"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="522" height="187.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="522" height="67.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSM-Ul-bTG" userLabel="Hour">
-                        <rect key="frame" x="27" y="75" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSM-Ul-bTG" userLabel="Hour">
+                        <rect key="frame" x="28" y="19" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfn-Ro-xL5" userLabel="Icon">
-                        <rect key="frame" x="100" y="62" width="68" height="46"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vfn-Ro-xL5" userLabel="Icon">
+                        <rect key="frame" x="86" y="19" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="iPG-fc-kxS"/>
+                            <constraint firstAttribute="height" constant="50" id="yID-Ab-Vc8"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="os6-Yr-sXD" userLabel="Humidity">
-                        <rect key="frame" x="202" y="75" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ7-VX-bUU" userLabel="Temperature">
+                        <rect key="frame" x="472" y="8" width="42" height="42.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ7-VX-bUU" userLabel="Temperature">
-                        <rect key="frame" x="460" y="75" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="os6-Yr-sXD" userLabel="Humidity">
+                        <rect key="frame" x="152" y="19" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="kSM-Ul-bTG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="8Yv-gi-UNv"/>
+                    <constraint firstAttribute="trailing" secondItem="ZQ7-VX-bUU" secondAttribute="trailing" constant="8" id="LIp-ha-D38"/>
+                    <constraint firstItem="vfn-Ro-xL5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="Lf7-Cd-OxW"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="os6-Yr-sXD" secondAttribute="bottom" constant="8" id="Ljn-fm-aUo"/>
+                    <constraint firstItem="ZQ7-VX-bUU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="NoT-qd-4nZ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="kSM-Ul-bTG" secondAttribute="bottom" constant="8" id="P5g-B4-dkh"/>
+                    <constraint firstAttribute="bottom" secondItem="ZQ7-VX-bUU" secondAttribute="bottom" constant="8" id="Pj0-Gm-Nfe"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="vfn-Ro-xL5" secondAttribute="bottom" constant="8" id="S64-Tp-ttS"/>
+                    <constraint firstItem="vfn-Ro-xL5" firstAttribute="leading" secondItem="kSM-Ul-bTG" secondAttribute="trailing" constant="16" id="WNp-ng-qjZ"/>
+                    <constraint firstItem="kSM-Ul-bTG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="Xoe-lL-Lcf"/>
+                    <constraint firstItem="os6-Yr-sXD" firstAttribute="leading" secondItem="vfn-Ro-xL5" secondAttribute="trailing" constant="16" id="acS-5N-JQy"/>
+                    <constraint firstItem="os6-Yr-sXD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="tRA-jb-yrw"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
@@ -53,7 +67,7 @@
                 <outlet property="IconLabel" destination="vfn-Ro-xL5" id="pUa-WF-eGL"/>
                 <outlet property="TempertureLabel" destination="ZQ7-VX-bUU" id="1Nc-ht-jM5"/>
             </connections>
-            <point key="canvasLocation" x="133" y="108"/>
+            <point key="canvasLocation" x="132.80000000000001" y="61.169415292353825"/>
         </tableViewCell>
     </objects>
 </document>

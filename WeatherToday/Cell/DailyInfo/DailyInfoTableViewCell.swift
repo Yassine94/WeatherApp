@@ -10,15 +10,21 @@ import UIKit
 
 class DailyInfoTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBOutlet weak var Day: UILabel!
+    @IBOutlet weak var Icon: UIImageView!
+    @IBOutlet weak var MaxTemperature: UILabel!
+    @IBOutlet weak var MinTemperature: UILabel!
+    
+    
+    func configure(day: Int, iconName: String, max: Double, min: Double) {
+        
+        Icon.image = UIImage(named: "\(iconName).png")
+        Day.text = String(day)
+        MaxTemperature.text = String(max)
+        MinTemperature.text = String(min)
+        
+        
     }
     
 }

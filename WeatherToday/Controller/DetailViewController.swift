@@ -26,13 +26,18 @@ class DetailViewController: UIViewController, UITableViewDataSource {
                                       success: { (data) in
                                         let decoder = JSONDecoder()
                                         self.infoWeather = (try? decoder.decode(Weather.self, from: data))
-                              
+                                        self.TableView.reloadData()
+                                        
         }) { (error) in
             print(error)
         }
         
-        TableView.register(UINib(nibName: "HeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderTableViewCell_ID")
+        TableView.register(UINib(nibName: "HeaderTableViewCell", bundle: nil), forCellReuseIdentifier:
+            "HeaderTableViewCell_ID")
         TableView.register(UINib(nibName: "ForecastTableViewCell", bundle: nil), forCellReuseIdentifier: "ForecastTableViewCell_ID")
+        TableView.register(UINib(nibName: "HourlyInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "HourlyInfoTableViewCell_ID")
+        TableView.register(UINib(nibName: "DailyInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "DailyInfoTableViewCell_ID")
+        TableView.register(UINib(nibName: "ExtraInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "ExtraInfoTableViewCell_ID")
         
         
         
@@ -58,28 +63,76 @@ class DetailViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-        
-        
-        
-        
-        
-        if let cell = TableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell_ID", for: indexPath) as? HeaderTableViewCell {
-            cell.configure(iconName: infoWeather?.currently.icon ?? "",
-                           temperatures: infoWeather?.currently.temperature ?? 0,
-                           currentForecast: infoWeather?.currently.summary ?? "")
-            return cell
+        switch indexPath.section {
+            
+        case 0:
+            if let HeaderCell = TableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell_ID", for: indexPath) as? HeaderTableViewCell {
+                HeaderCell.configure(iconName: infoWeather?.currently.icon ?? "",
+                                     temperatures: infoWeather?.currently.temperature ?? 0,
+                                     currentForecast: infoWeather?.currently.summary ?? "")
+                return HeaderCell
+            }
+            
+        case 1:
+            
+            if indexPath.row == 0 {
+                if let ForecastCell = TableView.dequeueReusableCell(withIdentifier: "ForecastTableViewCell_ID", for: indexPath) as? ForecastTableViewCell {
+                    ForecastCell.configure(summary: infoWeather?.hourly.summary ?? "")
+                    return ForecastCell
+                } else {
+                    
+                    if let HourlyCell = TableView.dequeueReusableCell(withIdentifier: "HourlyInfoTableViewCell_ID", for: indexPath) as? HourlyInfoTableViewCell {
+                        HourlyCell.configure(hour: infoWeather?.hourly.data[indexPath.row].time ??  0,
+                                             iconName: infoWeather?.hourly.data[indexPath.row].icon ?? "",
+                                             humidity: infoWeather?.hourly.data[indexPath.row].humidity ??  0,
+                                             temperature: infoWeather?.hourly.data[indexPath.row].temperature ??  0)
+                        return HourlyCell
+                    }
+                    
+                }
+            }
+            
+        case 2:
+            if indexPath.row == 0 {
+                if let ForecastCell = TableView.dequeueReusableCell(withIdentifier: "ForecastTableViewCell_ID", for: indexPath) as? ForecastTableViewCell {
+                    ForecastCell.configure(summary: infoWeather?.daily.summary ?? "")
+                    return ForecastCell
+                }
+                else {
+                    if let DailyCell = TableView.dequeueReusableCell(withIdentifier: "DailyInfoTableViewCell_ID", for: indexPath) as? DailyInfoTableViewCell {
+                        DailyCell.configure(day: infoWeather?.daily.data[indexPath.row].time ?? 0,
+                                            iconName: infoWeather?.daily.data[indexPath.row].icon ?? "",
+                                            max: infoWeather?.daily.data[indexPath.row].temperatureMax ?? 0,
+                                            min: infoWeather?.daily.data[indexPath.row].temperatureMin ?? 0)
+                        
+                        return DailyCell
+                    }
+                }
+            }
+            
+        case 3:
+            if indexPath.row == 0 {
+                if let ForecastCell = TableView.dequeueReusableCell(withIdentifier: "ForecastTableViewCell_ID", for: indexPath) as? ForecastTableViewCell {
+                    ForecastCell.configure(summary:   "Extra informations")
+                    return ForecastCell
+                }
+                else {
+                    
+                    if let ExtraInfoCell = TableView.dequeueReusableCell(withIdentifier: "ExtraInfoTableViewCell_ID", for: indexPath) as? ExtraInfoTableViewCell {
+                        ExtraInfoCell.configure(humidity: infoWeather?.currently.humidity ?? 0,
+                                                windspeed: infoWeather?.currently.windSpeed ?? 0,
+                                                pressure: infoWeather?.currently.pressure ?? 0,
+                                                uvindex: infoWeather?.currently.uvIndex ?? 0)
+                        
+                        return ExtraInfoCell
+                    }
+                }
+            }
+            
+        default:
+            return UITableViewCell()
         }
         return UITableViewCell()
+        
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = TableView.dequeueReusableCell(withIdentifier: "ForecastTableViewCell_ID", for: indexPath) as? ForecastTableViewCell {
-            cell.configure(summary: infoWeather?.hourly.summary ?? "")
-            return cell
-        }
-        return UITableViewCell()
-    }
-    
-    
 }
