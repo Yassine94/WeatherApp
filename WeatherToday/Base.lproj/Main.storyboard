@@ -51,10 +51,26 @@
                     <view key="view" contentMode="scaleToFill" id="XpG-na-zjg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="seX-gh-J9C">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="XpG-na-zjg" id="FHH-KF-NaY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="seX-gh-J9C" firstAttribute="top" secondItem="cvu-6K-nIY" secondAttribute="top" id="2JG-GL-D41"/>
+                            <constraint firstItem="cvu-6K-nIY" firstAttribute="trailing" secondItem="seX-gh-J9C" secondAttribute="trailing" id="A6j-5E-PzT"/>
+                            <constraint firstItem="seX-gh-J9C" firstAttribute="leading" secondItem="cvu-6K-nIY" secondAttribute="leading" id="PPm-CY-04g"/>
+                            <constraint firstItem="cvu-6K-nIY" firstAttribute="bottom" secondItem="seX-gh-J9C" secondAttribute="bottom" id="yGo-OU-ui6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cvu-6K-nIY"/>
                     </view>
                     <connections>
+                        <outlet property="TableView" destination="seX-gh-J9C" id="lbn-cb-r5L"/>
                         <outlet property="detailView" destination="XpG-na-zjg" id="xT5-iG-84m"/>
                     </connections>
                 </viewController>

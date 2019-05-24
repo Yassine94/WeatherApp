@@ -14,10 +14,10 @@ class HeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var temperature: UILabel!
     @IBOutlet weak var curentForecast: UILabel!
     
-    func configure(MesureObj: Weather) {
-        icon.image = UIImage(named: "\(MesureObj.currently.icon).png")
-        temperature.text = String(MesureObj.currently.temperature)
-        curentForecast.text = MesureObj.currently.summary
+    func configure(iconName: String, temperatures: Double, currentForecast: String) {
+        icon.image = UIImage(named: "\(iconName).png")
+        temperature.text = String(temperatures)
+        curentForecast.text = currentForecast
     }
     
 }

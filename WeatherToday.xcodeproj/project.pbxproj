@@ -20,6 +20,12 @@
 		5FCB27D12297DA63009A61A3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB27D02297DA63009A61A3 /* DetailViewController.swift */; };
 		5FCB27DB2297E528009A61A3 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB27D92297E528009A61A3 /* HeaderTableViewCell.swift */; };
 		5FCB27DC2297E528009A61A3 /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCB27DA2297E528009A61A3 /* HeaderTableViewCell.xib */; };
+		5FCB27DF2297F77E009A61A3 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB27DD2297F77E009A61A3 /* ForecastTableViewCell.swift */; };
+		5FCB27E02297F77E009A61A3 /* ForecastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCB27DE2297F77E009A61A3 /* ForecastTableViewCell.xib */; };
+		5FCB27E322980700009A61A3 /* HourlyInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB27E122980700009A61A3 /* HourlyInfoTableViewCell.swift */; };
+		5FCB27E422980700009A61A3 /* HourlyInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCB27E222980700009A61A3 /* HourlyInfoTableViewCell.xib */; };
+		5FCB27E922980960009A61A3 /* DailyInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB27E722980960009A61A3 /* DailyInfoTableViewCell.swift */; };
+		5FCB27EA22980960009A61A3 /* DailyInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FCB27E822980960009A61A3 /* DailyInfoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,12 @@
 		5FCB27D02297DA63009A61A3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5FCB27D92297E528009A61A3 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		5FCB27DA2297E528009A61A3 /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		5FCB27DD2297F77E009A61A3 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
+		5FCB27DE2297F77E009A61A3 /* ForecastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastTableViewCell.xib; sourceTree = "<group>"; };
+		5FCB27E122980700009A61A3 /* HourlyInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyInfoTableViewCell.swift; sourceTree = "<group>"; };
+		5FCB27E222980700009A61A3 /* HourlyInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyInfoTableViewCell.xib; sourceTree = "<group>"; };
+		5FCB27E722980960009A61A3 /* DailyInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyInfoTableViewCell.swift; sourceTree = "<group>"; };
+		5FCB27E822980960009A61A3 /* DailyInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyInfoTableViewCell.xib; sourceTree = "<group>"; };
 		9CCF217700B00BF0E86851ED /* Pods_WeatherToday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherToday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6613ACFD62B33FF05FFB5E6 /* Pods-WeatherToday.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherToday.debug.xcconfig"; path = "Target Support Files/Pods-WeatherToday/Pods-WeatherToday.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +143,8 @@
 		5FCB27D32297E4A4009A61A3 /* ForecastText */ = {
 			isa = PBXGroup;
 			children = (
+				5FCB27DD2297F77E009A61A3 /* ForecastTableViewCell.swift */,
+				5FCB27DE2297F77E009A61A3 /* ForecastTableViewCell.xib */,
 			);
 			path = ForecastText;
 			sourceTree = "<group>";
@@ -138,6 +152,8 @@
 		5FCB27D42297E4D1009A61A3 /* HourlyInfo */ = {
 			isa = PBXGroup;
 			children = (
+				5FCB27E122980700009A61A3 /* HourlyInfoTableViewCell.swift */,
+				5FCB27E222980700009A61A3 /* HourlyInfoTableViewCell.xib */,
 			);
 			path = HourlyInfo;
 			sourceTree = "<group>";
@@ -145,6 +161,8 @@
 		5FCB27D52297E4DA009A61A3 /* DailyInfo */ = {
 			isa = PBXGroup;
 			children = (
+				5FCB27E722980960009A61A3 /* DailyInfoTableViewCell.swift */,
+				5FCB27E822980960009A61A3 /* DailyInfoTableViewCell.xib */,
 			);
 			path = DailyInfo;
 			sourceTree = "<group>";
@@ -233,7 +251,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FCB27E422980700009A61A3 /* HourlyInfoTableViewCell.xib in Resources */,
+				5FCB27E02297F77E009A61A3 /* ForecastTableViewCell.xib in Resources */,
 				5FCB27DC2297E528009A61A3 /* HeaderTableViewCell.xib in Resources */,
+				5FCB27EA22980960009A61A3 /* DailyInfoTableViewCell.xib in Resources */,
 				5FA4CE522296DC5400738178 /* LaunchScreen.storyboard in Resources */,
 				5FA4CE4F2296DC5400738178 /* Assets.xcassets in Resources */,
 				5FA4CE4D2296DC5400738178 /* Main.storyboard in Resources */,
@@ -300,8 +321,11 @@
 				5FA4CE5F2296DCFE00738178 /* CitiesData.swift in Sources */,
 				5FCB27CD2297D4C4009A61A3 /* RequestManager.swift in Sources */,
 				5FA4CE612296DD3100738178 /* Weather.swift in Sources */,
+				5FCB27E322980700009A61A3 /* HourlyInfoTableViewCell.swift in Sources */,
+				5FCB27DF2297F77E009A61A3 /* ForecastTableViewCell.swift in Sources */,
 				5FA4CE5D2296DCF000738178 /* City.swift in Sources */,
 				5FCB27D12297DA63009A61A3 /* DetailViewController.swift in Sources */,
+				5FCB27E922980960009A61A3 /* DailyInfoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

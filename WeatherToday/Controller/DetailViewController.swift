@@ -9,27 +9,56 @@
 import UIKit
 import MapKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITableViewDataSource {
     
+    @IBOutlet weak var TableView: UITableView!
+    @IBOutlet var detailView: UIView!
     var AnnotationObj: MKPointAnnotation?
     var infoWeather: Weather?
+    var toto: String?
     
-    @IBOutlet var detailView: UIView!
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        TableView.dataSource = self
+        RequestManager.getWeatherInfo(latitude: AnnotationObj?.coordinate.latitude ?? 0,
+                                      longitude: AnnotationObj?.coordinate.longitude ?? 0,
+                                      success: { (data) in
+                                        let decoder = JSONDecoder()
+                                        self.infoWeather = (try? decoder.decode(Weather.self, from: data))
+                              
+        }) { (error) in
+            print(error)
+        }
         
-     RequestManager.getWeatherInfo(latitude: AnnotationObj?.coordinate.latitude ?? 0,
-                                   longitude: AnnotationObj?.coordinate.longitude ?? 0,
-                                   success: { (data) in
-                                    let decoder = JSONDecoder()
-                                    infoWeather = (try? decoder.decode(Weather.self, from: <#T##Data#>))
-                                    
-     }, failure: <#T##(Error) -> ()#>)
-       
+        TableView.register(UINib(nibName: "HeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderTableViewCell_ID")
+        TableView.register(UINib(nibName: "ForecastTableViewCell", bundle: nil), forCellReuseIdentifier: "ForecastTableViewCell_ID")
+        
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = TableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell_ID", for: indexPath) as? HeaderTableViewCell {
+            cell.configure(iconName: infoWeather?.currently.icon ?? "",
+                           temperatures: infoWeather?.currently.temperature ?? 0,
+                           currentForecast: infoWeather?.currently.summary ?? "")
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = TableView.dequeueReusableCell(withIdentifier: "ForecastTableViewCell_ID", for: indexPath) as? ForecastTableViewCell {
+            cell.configure(summary: infoWeather?.currently.icon ?? "")
+            return cell
+        }
+        return UITableViewCell()
     }
     
     
-   
-
 }

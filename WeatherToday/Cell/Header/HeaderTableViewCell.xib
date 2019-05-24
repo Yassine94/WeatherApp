@@ -20,18 +20,18 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BaY-eu-P6f">
-                        <rect key="frame" x="20" y="17" width="151" height="102"/>
+                        <rect key="frame" x="20" y="17" width="202" height="102"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ae5-tB-XpL">
-                        <rect key="frame" x="414" y="58" width="42" height="21"/>
+                        <rect key="frame" x="368" y="58" width="162" height="45"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPe-VL-d5A">
-                        <rect key="frame" x="34" y="199" width="42" height="22"/>
+                        <rect key="frame" x="31" y="179" width="280" height="48"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -45,7 +45,7 @@
                 <outlet property="icon" destination="BaY-eu-P6f" id="8aa-QE-qhd"/>
                 <outlet property="temperature" destination="ae5-tB-XpL" id="JDY-0l-hgc"/>
             </connections>
-            <point key="canvasLocation" x="68.799999999999997" y="75.562218890554732"/>
+            <point key="canvasLocation" x="-171" y="-46"/>
         </tableViewCell>
     </objects>
 </document>
