@@ -27,8 +27,8 @@ class HourlyInfoTableViewCell: UITableViewCell {
         IconLabel.image = UIImage(named: "\(iconName).png")
         HourLabel.text = String(formatter.string(from: date as Date))
         HumidityLabel.text = "\(Int(humidity*100)) %"
-        TempertureLabel.text = String(temperature)
-        
+        TempertureLabel.text = "\(Int(temperature))°C"
+       
         
     }
     

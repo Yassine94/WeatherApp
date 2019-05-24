@@ -16,7 +16,7 @@ class HeaderTableViewCell: UITableViewCell {
     
     func configure(iconName: String, temperatures: Double, currentForecast: String) {
         icon.image = UIImage(named: "\(iconName).png")
-        temperature.text = String(temperatures)
+        temperature.text = "\(Int(temperatures))°C"
         curentForecast.text = currentForecast
     }
     

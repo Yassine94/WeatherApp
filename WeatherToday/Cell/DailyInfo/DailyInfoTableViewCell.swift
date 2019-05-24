@@ -25,8 +25,8 @@ class DailyInfoTableViewCell: UITableViewCell {
         
         Icon.image = UIImage(named: "\(iconName).png")
         Day.text = String(formatter.string(from: date as Date))
-        MaxTemperature.text = String(max)
-        MinTemperature.text = String(min)
+        MaxTemperature.text = "\(Int(max))°C"
+        MinTemperature.text = "\(Int(min))°C"
         
         
     }
